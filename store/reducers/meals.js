@@ -24,16 +24,16 @@ const mealsReducer = (state = initialState, action) => {
     case SET_FILTERS:
       const appliedFilters = action.filters;
       const updatedFilteredMeals = state.meals.filter((meal) => {
-        if (appliedfilters.glutenFree && !meal.isGlutenFree) {
+        if (appliedFilters.glutenFree && !meal.isGlutenFree) {
           return false;
         }
-        if (appliedfilters.lactoseFree && !meal.isLactoseFree) {
+        if (appliedFilters.lactoseFree && !meal.isLactoseFree) {
           return false;
         }
-        if (appliedfilters.vegetarian && !meal.isVegetarian) {
+        if (appliedFilters.vegetarian && !meal.isVegetarian) {
           return false;
         }
-        if (appliedfilters.vegan && !meal.isVegan) {
+        if (appliedFilters.vegan && !meal.isVegan) {
           return false;
         }
         return true;
